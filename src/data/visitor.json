@@ -1,0 +1,12 @@
+{
+    "title": "Visitor Badge",
+    "description": "Database to store visitor data",
+    "data": {
+        "feri-irawan": [
+            {
+                "repo": "visitor-badge",
+                "visitor": 0
+            }
+        ]
+    }
+}
