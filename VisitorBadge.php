@@ -245,7 +245,7 @@ class VisitorBadge
     $options = [
       "label" => "VISITOR",
       "color" => "#00b3ff",
-      "style" => 'flat-square',
+      "style" => "flat-square",
       "logo" => null,
     ];
 
@@ -255,14 +255,17 @@ class VisitorBadge
      */
     if ($custom_options !== []) {
       foreach ($custom_options as $key => $value) {
-        $options[$key] = $value == 'default' ? $options[$key] : $value;
+        $options[$key] = $value == "default" ? $options[$key] : $value;
       }
     }
 
     // Membuat message
     $options["message"] = $this->getVisitor();
 
-    // Memberitahu browser bahwa output yang diberikan adalah imag/svg+xml
+    /**
+     * Headers
+     */
+    header("Cache-Control: no-cache, max-age=0, no-store, s-maxage=0, proxy-revalidate");
     header("Content-Type: image/svg+xml");
 
     /**
@@ -278,7 +281,7 @@ class VisitorBadge
       }
 
       // Jika errornya cuma 1 (Username atau Reposiotry)
-      $options["message"] = $this->error[0]['message'];
+      $options["message"] = $this->error[0]["message"];
       return $this->generateBadge($options);
     }
 
