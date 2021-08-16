@@ -6,6 +6,8 @@ Visitor Badge untuk Website atau Github repository, Dibuat dengan ❤ dan PHP na
 
 ![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=feri-irawan&repo=visitor-badge&style=for-the-badge)
 
+Anda bisa me-refresh halaman ini jika ingin membuktikannya 😄
+
 # Usage
 
 Untuk menggunakannya sangat mudah, Anda hanya perlu melakukannya seperti berikut:
