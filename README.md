@@ -4,7 +4,7 @@ Visitor Badge untuk Website atau Github repository, Dibuat dengan ❤ dan PHP na
 
 # Demo
 
-[![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=feri-irawan&repo=visitor-badge)](https://visitor-badge.feriirawann.repl.co?username=feri-irawan&repo=visitor-badge)
+![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=feri-irawan&repo=visitor-badge&style=for-the-badge)
 
 # Usage
 
