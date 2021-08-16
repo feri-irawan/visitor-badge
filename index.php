@@ -15,10 +15,8 @@ $user = [
 $options = [
   "label" => isset($_GET['label']) ? $_GET['label'] : 'default',
   "color" => isset($_GET['color']) ? $_GET['color'] : 'default',
-  "styles" => [
-    "style" => isset($_GET['style']) ? $_GET['style'] : 'default',
-    "logo" => isset($_GET['logo']) ? $_GET['logo'] : 'default',
-  ],
+  "style" => isset($_GET['style']) ? $_GET['style'] : 'default',
+  "logo" => isset($_GET['logo']) ? $_GET['logo'] : 'default',
 ];
 
 /**

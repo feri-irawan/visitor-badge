@@ -198,6 +198,7 @@ class VisitorBadge
 
     /** 
      * Cek apakah user atau repositorynya sudah ada
+     * Jika belum maka buat yang baru
      */
     if (!$this->isExists("username") || !$this->isExists("repository")) {
       $this->setUserAndRepository();
@@ -223,6 +224,16 @@ class VisitorBadge
   }
 
   /**
+   * Membuat badge
+   */
+  public function generateBadge($options)
+  {
+    $options = http_build_query($options);
+    $url = "https://img.shields.io/static/v1?{$options}";
+    return file_get_contents($url);
+  }
+
+  /**
    * Menampilkan badge
    * @param Array $options (optional) 
    */
@@ -234,10 +245,8 @@ class VisitorBadge
     $options = [
       "label" => "VISITOR",
       "color" => "#00b3ff",
-      "styles" => [
-        "style" => 'flat-square',
-        "logo" => null,
-      ],
+      "style" => 'flat-square',
+      "logo" => null,
     ];
 
     /**
@@ -246,38 +255,34 @@ class VisitorBadge
      */
     if ($custom_options !== []) {
       foreach ($custom_options as $key => $value) {
-        if ($key !== 'styles') {
-          $options[$key] = $value == 'default' ? $options[$key] : $value;
-        } else {
-          foreach ($custom_options['styles'] as $key => $value) {
-            $options['styles'][$key] = $value == 'default' ? $options['styles'][$key] : $value;
-          }
-        }
+        $options[$key] = $value == 'default' ? $options[$key] : $value;
       }
     }
 
-    $visitor = $this->getVisitor();
-    $color = str_replace("#", "%23", $options['color']);
-    $styles = http_build_query($options['styles']);
+    // Membuat message
+    $options["message"] = $this->getVisitor();
 
+    // Memberitahu browser bahwa output yang diberikan adalah imag/svg+xml
     header("Content-Type: image/svg+xml");
 
     /**
      * Membuat badge error
      */
     if (!empty($this->error)) {
+      $options["label"] = "ERROR";
 
       // Jika yang error Username dan Repository
       if (count($this->error) == 2) {
-        $message = "Username dan Repository tidak boleh mengandung spasi atau akarakter kosong";
-        return file_get_contents("https://img.shields.io/badge/ERROR-{$message}-red?{$styles}");
+        $options["message"] = "Username dan Repository tidak boleh mengandung spasi atau akarakter kosong";
+        return $this->generateBadge($options);
       }
 
       // Jika errornya cuma 1 (Username atau Reposiotry)
-      return file_get_contents("https://img.shields.io/badge/ERROR-{$this->error[0]['message']}-red?{$styles}");
+      $options["message"] = $this->error[0]['message'];
+      return $this->generateBadge($options);
     }
 
     // Jika tidak ada error (ini yang semestinya)
-    return file_get_contents("https://img.shields.io/badge/{$options['label']}-{$visitor}-{$color}?{$styles}");
+    return $this->generateBadge($options);
   }
 }
