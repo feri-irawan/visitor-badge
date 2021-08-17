@@ -69,7 +69,7 @@ Untuk nama gaya silahkan lihat daftar gaya pada [shield.io](https://shield.io)
 ### Logo
 
 ```
-![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=feri-irawan&repo=visitor-badge&style=LOGO_NAME)
+![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=feri-irawan&repo=visitor-badge&logo=LOGO_NAME)
 ```
 
 Untuk nama logo, silahkan lihat daftar logo yang di sediakan oleh [simple-icons](https://github.com/simple-icons/simple-icons/blob/develop/slugs.md)
