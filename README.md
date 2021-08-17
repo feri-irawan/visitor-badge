@@ -36,7 +36,7 @@ Parameter ini sifatnya opsional, ini digunakan untuk mengatur tampilan badge
 
 ## Contoh Kustomisasi
 
-### Label :
+### Label
 
 ```
 Label : VIEWS
@@ -46,7 +46,7 @@ Label : PENGUNJUNG
 ![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=feri-irawan&repo=visitor-badge&style=for-the-badge&label=PENGUNJUNG)
 ```
 
-### Color :
+### Color
 
 ```
 Name : ![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=feri-irawan&repo=visitor-badge&color=red)
