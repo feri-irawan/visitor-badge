@@ -40,19 +40,19 @@ Parameter ini sifatnya opsional, ini digunakan untuk mengatur tampilan badge
 
 ```
 Label : VIEWS
-![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=feri-irawan&repo=visitor-badge&style=for-the-badge&label=VIEWS)
+![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&style=for-the-badge&label=VIEWS)
 
 Label : PENGUNJUNG
-![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=feri-irawan&repo=visitor-badge&style=for-the-badge&label=PENGUNJUNG)
+![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&style=for-the-badge&label=PENGUNJUNG)
 ```
 
 ### Color
 
 ```
-Name : ![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=feri-irawan&repo=visitor-badge&color=red)
-HEX : ![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=feri-irawan&repo=visitor-badge&color=#e05d44)
-RGB : ![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=feri-irawan&repo=visitor-badge&color=rgb%28224%2C+93%2C+68%29)
-HSL : ![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=feri-irawan&repo=visitor-badge&color=hsl%2810%2C+72%25%2C+57%25%29)
+Name : ![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&color=red)
+HEX : ![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&color=#e05d44)
+RGB : ![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&color=rgb%28224%2C+93%2C+68%29)
+HSL : ![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&color=hsl%2810%2C+72%25%2C+57%25%29)
 ```
 
 > Info: <br />
@@ -61,7 +61,7 @@ HSL : ![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=feri-i
 ### Style
 
 ```
-![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=feri-irawan&repo=visitor-badge&style=STYLE_NAME)
+![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&style=STYLE_NAME)
 ```
 
 Untuk nama gaya silahkan lihat daftar gaya pada [shield.io](https://shield.io)
@@ -69,7 +69,7 @@ Untuk nama gaya silahkan lihat daftar gaya pada [shield.io](https://shield.io)
 ### Logo
 
 ```
-![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=feri-irawan&repo=visitor-badge&logo=LOGO_NAME)
+![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&logo=LOGO_NAME)
 ```
 
 Untuk nama logo, silahkan lihat daftar logo yang di sediakan oleh [simple-icons](https://github.com/simple-icons/simple-icons/blob/develop/slugs.md)
