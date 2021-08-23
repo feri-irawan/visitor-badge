@@ -265,8 +265,10 @@ class VisitorBadge
     /**
      * Headers
      */
-    header("Cache-Control: no-cache, max-age=0, no-store, s-maxage=0, proxy-revalidate");
     header("Content-Type: image/svg+xml");
+    header("Cache-Control: no-cache, max-age=0, no-store, s-maxage=0, proxy-revalidate");
+    $expires = gmdate("D, d M Y H:i:s", strtotime("-10 minutes"));
+    header("Expires: {$expires} GMT");
 
     /**
      * Membuat badge error
