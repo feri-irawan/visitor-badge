@@ -7,6 +7,7 @@ require_once "VisitorBadge.php";
 $user = [
   "username" => isset($_GET["username"]) ? $_GET["username"] : "",
   "repo" => isset($_GET["repo"]) ? $_GET["repo"] : "",
+  "token" => isset($_GET["token"]) ? $_GET["token"] : "",
 ];
 
 /**
@@ -28,8 +29,10 @@ $vbadge = new FI\Badge\VisitorBadge($file_path);
 /**
  * Mengatur username dan repository
  */
+
 $vbadge->setUsername($user["username"]);
 $vbadge->setRepository($user["repo"]);
+$vbadge->githubVisitor($user["token"]);
 
 /**
  * Menapilkan hasil

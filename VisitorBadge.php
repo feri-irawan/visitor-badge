@@ -13,59 +13,13 @@ namespace FI\Badge;
 class VisitorBadge
 {
   /**
-   * @param String $username
-   * @param String $repository
-   * @param URL $database_path lokasi penyimpanan file (.json)
+   * @param String $database_path lokasi penyimpanan file (.json)
    */
   protected $error;
   public function __construct($database_path)
   {
     $this->database_path = $database_path;
     $this->setData();
-  }
-
-  /**
-   * Validation
-   */
-  protected function validation($str)
-  {
-    if ($str == trim($str) && strpos($str, " ") !== false || empty($str)) {
-      return false;
-    }
-    return true;
-  }
-
-  /**
-   * Set username
-   * @param String $username
-   */
-  public function setUsername($username)
-  {
-    if (!$this->validation($username)) {
-      $this->error[] = [
-        "code" => 1,
-        "message" => "Username tidak boleh mengandung spasi atau karakter kosong",
-      ];
-
-      return false;
-    }
-
-    $this->username = urlencode($username);
-  }
-  /**
-   * Set repository
-   * @param String $repository
-   */
-  public function setRepository($repository)
-  {
-    if (!$this->validation($repository)) {
-      $this->error[] = [
-        "code" => 2,
-        "message" => "Repository tidak boleh mengandung spasi atau karakter kosong",
-      ];
-      return false;
-    }
-    $this->repository = urlencode($repository);
   }
 
   /**
@@ -139,6 +93,80 @@ class VisitorBadge
   }
 
   /**
+   * Validation
+   */
+  protected function validation($str)
+  {
+    if ($str == trim($str) && strpos($str, " ") !== false || empty($str)) {
+      return false;
+    }
+    return true;
+  }
+
+  /**
+   * Set username
+   * @param String $username
+   */
+  public function setUsername($username)
+  {
+    if (!$this->validation($username)) {
+      $this->error[] = [
+        "code" => 1,
+        "message" => "Username tidak boleh mengandung spasi atau karakter kosong",
+      ];
+
+      return false;
+    }
+
+    $this->username = urlencode($username);
+  }
+
+  /**
+   * Set repository
+   * @param String $repository
+   */
+  public function setRepository($repository)
+  {
+    if (!$this->validation($repository)) {
+      $this->error[] = [
+        "code" => 2,
+        "message" => "Repository tidak boleh mengandung spasi atau karakter kosong",
+      ];
+      return false;
+    }
+    $this->repository = urlencode($repository);
+  }
+
+  /**
+   * Github Visistor - badge yang dibuat akan mengikuti visitor yang ada di Github insight > traffic > views
+   * @param String $token - personal access token github
+   */
+  public function githubVisitor($token = "")
+  {
+
+    $username = $this->username;
+    $repository = $this->repository;
+
+    $url = "https://api.github.com/repos/{$username}/{$repository}/traffic/views";
+
+    $curl = curl_init($url);
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+    $headers = array(
+      "Authorization: token {$token}",
+      "Accept: application/vnd.github.v3+json",
+      "User-Agent: {$_SERVER['HTTP_USER_AGENT']}",
+    );
+    curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+
+    $visitor = json_decode(curl_exec($curl), true);
+    curl_close($curl);
+
+    $this->githubVisitor = isset($visitor["count"]) ? $visitor["count"] : null;
+  }
+
+  /**
    * Membuat user dan repository baru jika yang dimasukan belum ada
    */
   protected function setUserAndRepository()
@@ -177,7 +205,7 @@ class VisitorBadge
 
       // Cari berdasarkan nama repository
       if ($repos[$i]["repo"] == $this->repository) {
-        $data["data"][$this->username][$i]["visitor"] = $repos[$i]["visitor"] + 1;
+        $data["data"][$this->username][$i]["visitor"] = isset($this->githubVisitor) ? $this->githubVisitor :  $repos[$i]["visitor"] + 1;
 
         $update = json_encode($data, JSON_PRETTY_PRINT);
         file_put_contents($this->database_path, $update);
