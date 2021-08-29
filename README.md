@@ -26,7 +26,23 @@ Parameter ini adalah URL parameter yang dibutuhkan (required)
 
 ## Parameter Opsional
 
-Parameter ini sifatnya opsional, ini digunakan untuk mengatur tampilan badge
+### Menyamakan Angka Visitor Sesuai dengan Views Repository
+
+Jika Anda ingin menyamakan atau melakukan restart angka pada badge menjadi angka dari views yang ada di **Insight > traffic > views** repository Anda.
+
+Maka, Anda perlu menambahkan parameter baru di URL yaitu `token`, yang nilainya adalah **_akses token pribadi_** Anda, oleh karena itu Anda perlu membuat _akses token pribadi_, Caranya silahkan baca di [Creating a personal access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+
+> **Info:** <br> Untuk langkah ke-8 yang ada dipanduan [Creating a personal access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token), anda hanya perlu mencentang 1 permission yaitu `public_repo`
+
+**Contoh Penggunaan Token:**
+
+```
+![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&token=YOUR_PERSONAL_ACCESS_TOKEN)
+```
+
+### Tampilan
+
+Berikut adalah daftar parameter untuk mengatur tampilan badge
 | Paramter | Deskripsi |
 | :------: | --------- |
 | `label` | Ini untuk mengganti label default (VISITOR) dengan label lain |
