@@ -144,8 +144,8 @@ class VisitorBadge
   public function githubVisitor($token = "")
   {
 
-    $username = $this->username;
-    $repository = $this->repository;
+    $username = isset($this->username) ? $this->username : '';
+    $repository = isset($this->repository) ? $this->repository : '';
 
     $url = "https://api.github.com/repos/{$username}/{$repository}/traffic/views";
 
@@ -257,7 +257,7 @@ class VisitorBadge
   public function generateBadge($options)
   {
     $color = urlencode($options['color']);
-    $message = $options['message'];
+    $message = rawurlencode($options['message']);
 
     unset($options['color'], $options['message']);
     $options = http_build_query($options);
