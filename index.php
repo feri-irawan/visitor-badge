@@ -18,6 +18,7 @@ $options = [
   "color" => isset($_GET["color"]) ? $_GET["color"] : "default",
   "style" => isset($_GET["style"]) ? $_GET["style"] : "default",
   "logo" => isset($_GET["logo"]) ? $_GET["logo"] : "default",
+  "contentType" => isset($_GET["contentType"]) ? $_GET["contentType"] : "default",
 ];
 
 /**

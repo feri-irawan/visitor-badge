@@ -256,13 +256,18 @@ class VisitorBadge
    */
   public function generateBadge($options)
   {
-    $color = urlencode($options['color']);
-    $message = rawurlencode($options['message']);
+    $content_type = $options['contentType'];
+    $color = urlencode($options["color"]);
+    $message = rawurlencode($options["message"]);
 
-    unset($options['color'], $options['message']);
+    unset($options["color"], $options["message"]);
     $options = http_build_query($options);
 
-    $url = "https://raster.shields.io/badge/{$message}-{$color}.png?{$options}";
+    if ($content_type === "svg") {
+      $url = "https://img.shields.io/static/v1?message={$message}&{$options}&color={$color}";
+    } else {
+      $url = "https://raster.shields.io/badge/{$message}-{$color}.png?{$options}";
+    }
 
     return file_get_contents($url);
   }
@@ -277,6 +282,7 @@ class VisitorBadge
      * Default optoins
      */
     $options = [
+      "contentType" => "png",
       "label" => "VISITOR",
       "color" => "#00b3ff",
       "style" => "flat-square",
@@ -299,7 +305,13 @@ class VisitorBadge
     /**
      * Headers
      */
-    header("Content-Type: image/png");
+    if ($options['contentType'] === 'svg') {
+      $content_type = 'image/svg+xml';
+    } else {
+      $content_type = 'image/png';
+    }
+
+    header("Content-Type: {$content_type}");
     header("Cache-Control: no-cache, max-age=0, no-store, s-maxage=0, proxy-revalidate");
     $expires = gmdate("D, d M Y H:i:s", strtotime("-10 minutes"));
     header("Expires: {$expires} GMT");
