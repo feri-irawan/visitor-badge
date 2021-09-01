@@ -256,8 +256,14 @@ class VisitorBadge
    */
   public function generateBadge($options)
   {
+    $color = urlencode($options['color']);
+    $message = $options['message'];
+
+    unset($options['color'], $options['message']);
     $options = http_build_query($options);
-    $url = "https://img.shields.io/static/v1?{$options}";
+
+    $url = "https://raster.shields.io/badge/{$message}-{$color}.png?{$options}";
+
     return file_get_contents($url);
   }
 
@@ -293,7 +299,7 @@ class VisitorBadge
     /**
      * Headers
      */
-    header("Content-Type: image/svg+xml");
+    header("Content-Type: image/png");
     header("Cache-Control: no-cache, max-age=0, no-store, s-maxage=0, proxy-revalidate");
     $expires = gmdate("D, d M Y H:i:s", strtotime("-10 minutes"));
     header("Expires: {$expires} GMT");
