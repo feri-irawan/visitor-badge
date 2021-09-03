@@ -2,18 +2,19 @@
 
 Visitor Badge untuk Website atau Github repository, Dibuat dengan ❤ dan PHP native oleh [Saya](https://github.com/feri-irawan)
 
-# Demo
+# Demo Langsung
 
 ![Visitor Badge](https://visitor-badges.glitch.me?username=feri-irawan&repo=visitor-badge&style=for-the-badge)
 
 Anda bisa me-refresh halaman ini jika ingin membuktikannya 😄
 
-# Usage
+# Penggunaan
 
 Untuk menggunakannya sangat mudah, Anda hanya perlu melakukannya seperti berikut:
 
-```
-![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPO_ID)
+```md
+HTML : <img src="https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPO_ID" alt="Visitor Badge" />
+Markdown : ![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPO_ID)
 ```
 
 ## Paramter Standar
@@ -34,11 +35,25 @@ Maka, Anda perlu menambahkan parameter baru di URL yaitu `token`, yang nilainya 
 
 > **Info:** <br> Untuk langkah ke-8 yang ada dipanduan [Creating a personal access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token), anda hanya perlu mencentang 1 permission yaitu `public_repo`
 
-**Contoh Penggunaan Token:**
+**Contoh Penggunaan Token :**
 
-```
+```md
 ![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&token=YOUR_PERSONAL_ACCESS_TOKEN)
 ```
+
+### Tipe Konten
+
+Secara default badge yang dikembalikan adalah sebuah gambar PNG yang bisa saja buram, oleh karena itu, untuk saat ini telah disediakan tipe konten kedua yaitu SVG. Bagaimana mengatur tipe konten?
+
+Untuk mengatur tipe konten Anda hanya perlu menambah parameter baru di URL, yaitu `contentType`.
+
+**Contoh Penggunaan ContentType :**
+
+```md
+![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&contentType=svg)
+```
+
+> **Info:** <br> Jika tipe konten yang Anda masukan tidak ada dalam daftar tipe konten yang di sediakan, maka secara default tipe konten yang akan diberikan kembali ke tipe konten PNG
 
 ### Tampilan
 
@@ -54,7 +69,7 @@ Berikut adalah daftar parameter untuk mengatur tampilan badge
 
 ### Label
 
-```
+```md
 Label : VIEWS
 ![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&style=for-the-badge&label=VIEWS)
 
@@ -64,7 +79,7 @@ Label : PENGUNJUNG
 
 ### Color
 
-```
+```md
 Name : ![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&color=red)
 HEX : ![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&color=#e05d44)
 RGB : ![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&color=rgb%28224%2C+93%2C+68%29)
@@ -76,7 +91,7 @@ HSL : ![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&r
 
 ### Style
 
-```
+```md
 ![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&style=STYLE_NAME)
 ```
 
@@ -84,7 +99,7 @@ Untuk nama gaya silahkan lihat daftar gaya pada [shield.io](https://shield.io)
 
 ### Logo
 
-```
+```md
 ![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&logo=LOGO_NAME)
 ```
 
