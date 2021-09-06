@@ -4,7 +4,7 @@ Visitor Badge untuk Website atau Github repository, Dibuat dengan ❤ dan PHP na
 
 # Demo Langsung
 
-![Visitor Badge](https://visitor-badges.glitch.me?username=feri-irawan&repo=visitor-badge&style=for-the-badge)
+![Visitor Badge](https://visitor-badges.glitch.me?username=feri-irawan&repo=visitor-badge&style=for-the-badge&contentType=svg)
 
 Anda bisa me-refresh halaman ini jika ingin membuktikannya 😄
 
@@ -16,6 +16,10 @@ Untuk menggunakannya sangat mudah, Anda hanya perlu melakukannya seperti berikut
 HTML : <img src="https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPO_ID" alt="Visitor Badge" />
 Markdown : ![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPO_ID)
 ```
+
+Anda juga bisa membuat badge dengan menggunakan Generator/Maker yang telah kami sediakan.
+
+[![Maker](https://img.shields.io/badge/Go%20To%20Maker-%2310b981?style=for-the-badge)](https://visitor-badges.glitch.me/maker.html)
 
 ## Paramter Standar
 
