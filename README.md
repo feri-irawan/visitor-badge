@@ -4,7 +4,7 @@ Visitor Badge untuk Website atau Github repository, Dibuat dengan ❤ dan PHP na
 
 # Demo Langsung
 
-![Visitor Badge](https://visitor-badges.glitch.me?username=feri-irawan&repo=visitor-badge&style=for-the-badge&contentType=svg)
+![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=feri-irawan&repo=visitor-badge&style=for-the-badge&contentType=svg)
 
 Anda bisa me-refresh halaman ini jika ingin membuktikannya 😄
 
@@ -13,13 +13,13 @@ Anda bisa me-refresh halaman ini jika ingin membuktikannya 😄
 Untuk menggunakannya sangat mudah, Anda hanya perlu melakukannya seperti berikut:
 
 ```md
-HTML : <img src="https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPO_ID" alt="Visitor Badge" />
-Markdown : ![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPO_ID)
+HTML : <img src="https://visitor-badge.feriirawann.repl.co?username=YOUR_USERNAME&repo=YOUR_REPO_ID" alt="Visitor Badge" />
+Markdown : ![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=YOUR_USERNAME&repo=YOUR_REPO_ID)
 ```
 
 Anda juga bisa membuat badge dengan menggunakan Generator/Maker yang telah kami sediakan.
 
-[![Maker](https://img.shields.io/badge/Go%20To%20Maker-%2310b981?style=for-the-badge)](https://visitor-badges.glitch.me/maker.html)
+[![Maker](https://img.shields.io/badge/Go%20To%20Maker-%2310b981?style=for-the-badge)](https://visitor-badge.feriirawann.repl.co/maker.html)
 
 ## Paramter Standar
 
@@ -42,7 +42,7 @@ Maka, Anda perlu menambahkan parameter baru di URL yaitu `token`, yang nilainya 
 **Contoh Penggunaan Token :**
 
 ```md
-![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&token=YOUR_PERSONAL_ACCESS_TOKEN)
+![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&token=YOUR_PERSONAL_ACCESS_TOKEN)
 ```
 
 ### Tipe Konten
@@ -54,7 +54,7 @@ Untuk mengatur tipe konten Anda hanya perlu menambah parameter baru di URL, yait
 **Contoh Penggunaan ContentType :**
 
 ```md
-![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&contentType=svg)
+![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&contentType=svg)
 ```
 
 > **Info:** <br> Jika tipe konten yang Anda masukan tidak ada dalam daftar tipe konten yang di sediakan, maka secara default tipe konten yang akan diberikan kembali ke tipe konten PNG
@@ -75,19 +75,19 @@ Berikut adalah daftar parameter untuk mengatur tampilan badge
 
 ```md
 Label : VIEWS
-![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&style=for-the-badge&label=VIEWS)
+![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&style=for-the-badge&label=VIEWS)
 
 Label : PENGUNJUNG
-![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&style=for-the-badge&label=PENGUNJUNG)
+![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&style=for-the-badge&label=PENGUNJUNG)
 ```
 
 ### Color
 
 ```md
-Name : ![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&color=red)
-HEX : ![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&color=#e05d44)
-RGB : ![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&color=rgb%28224%2C+93%2C+68%29)
-HSL : ![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&color=hsl%2810%2C+72%25%2C+57%25%29)
+Name : ![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&color=red)
+HEX : ![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&color=#e05d44)
+RGB : ![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&color=rgb%28224%2C+93%2C+68%29)
+HSL : ![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&color=hsl%2810%2C+72%25%2C+57%25%29)
 ```
 
 > Info: <br />
@@ -96,7 +96,7 @@ HSL : ![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&r
 ### Style
 
 ```md
-![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&style=STYLE_NAME)
+![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&style=STYLE_NAME)
 ```
 
 Untuk nama gaya silahkan lihat daftar gaya pada [shield.io](https://shield.io)
@@ -104,7 +104,7 @@ Untuk nama gaya silahkan lihat daftar gaya pada [shield.io](https://shield.io)
 ### Logo
 
 ```md
-![Visitor Badge](https://visitor-badges.glitch.me?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&logo=LOGO_NAME)
+![Visitor Badge](https://visitor-badge.feriirawann.repl.co?username=YOUR_USERNAME&repo=YOUR_REPOSITORY&logo=LOGO_NAME)
 ```
 
 Untuk nama logo, silahkan lihat daftar logo yang di sediakan oleh [simple-icons](https://github.com/simple-icons/simple-icons/blob/develop/slugs.md)
